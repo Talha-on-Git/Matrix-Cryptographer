@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/output.css">
+    <title>Matrix Cryprographer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.1.0/math.min.js"></script>
+</head>
+<body class="bg-slate-400">
+    <div class="container p-3">
+        <img src="https://media.licdn.com/dms/image/v2/C560BAQFTBp7jlfHiug/company-logo_200_200/company-logo_200_200/0/1630601703372?e=2147483647&v=beta&t=0THPp6seshzPXP8rD4Z4tv2U4-ZupmpYAaorZYzbtNg" alt="Govt National College Logo" class="mx-auto w-1/12 h-1/12 rounded-full mb-3">
+        <h1 class="text-4xl text-red-500 text-center font-bold">Matrix Cryprographer</h1>
+        <div class="w-1/2 sm:w-1/4 xl:w-1/5 mx-auto my-5 bg-slate-50 p-4 rounded">
+            <form id="message-form" class="mx-auto space-y-2">
+            <label for="message" class="text-base sm:textlg block">
+                Enter Message</label>
+             <input type="text" id="message" class="border-2 border-yellow-500 rounded-md w-full p-1" required>
+            <label for="rowsB" class="text-base sm:textlg block">
+                Rows for Key Matrix</label>
+             <input type="number" id="rowsB" class="border-2 rounded-md border-yellow-500 w-full p-1" required>
+            <label for="colsB" class="text-base sm:textlg block">
+                Columns for Key Matrix</label>
+             <input type="number" id="colsB" class="border-2 rounded-md border-yellow-500 w-full p-1" required>
+             <div id="key-matrix" class="my-3"></div>
+            <button type="submit" class="w-full p-2 rounded bg-yellow-500">Generate Matrices</button>
+        </form>
+        </div>
+        <div id="matrix-output" class="w-11/12 mx-auto my-5 p-4 rounded"></div>
+    <script src="script.js"></script>
+</body>
+</html>
