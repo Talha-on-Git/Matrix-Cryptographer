@@ -103,7 +103,7 @@ document.getElementById("message-form").addEventListener("submit", function (eve
   function displayMatrix(title, matrix) {
     const matrixDiv = document.createElement("div");
     matrixDiv.className =
-      "bg-slate-50 p-4 m-2 rounded-md shadow-md inline-block align-top";
+      "bg-slate-50 p-4 m-2 rounded-md shadow-md inline-block align-top border-2 border-black hover:bg-cyan-300 transform hover:scale-105 transition-all duration-300";
   
     // Title for the matrix
     const titleElement = document.createElement("h3");
@@ -147,7 +147,7 @@ document.getElementById("message-form").addEventListener("submit", function (eve
 
   // final message
   const originalMessageDiv = document.createElement("div");
-  originalMessageDiv.className = "bg-slate-50 p-4 m-2 rounded-md shadow-md mt-4 text-lg";
+  originalMessageDiv.className = "bg-slate-50 p-4 m-2 rounded-md shadow-md mt-4 text-lg border-2 border-black hover:bg-cyan-300 transform hover:scale-105 transition-all duration-300";
   originalMessageDiv.innerHTML = `<strong>Decrypted Message:</strong> ${message}`;
   outputDiv.appendChild(originalMessageDiv);
 });
@@ -177,7 +177,7 @@ function updateKeyMatrixInputs() {
       const input = document.createElement("input");
       input.type = "number";
       input.id = `key-${i}-${j}`;
-      input.className = "border-2 rounded-md border-yellow-500 p-1 m-1 w-1/4 sm:w-1/5 xl:w-1/6";
+      input.className = "border-2 rounded-md border-yellow-500 p-1 m-1 w-1/4 xl:w-1/6 hover:bg-yellow-600 transform hover:scale-110 transition-all duration-300";
       input.required = true;
       rowDiv.appendChild(input);
     }

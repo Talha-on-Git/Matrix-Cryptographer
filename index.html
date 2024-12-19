@@ -5,28 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/output.css">
     <title>Matrix Cryprographer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.1.0/math.min.js"></script>
 </head>
-<body class="bg-slate-400">
+<body class="bg-gradient-to-r from-amber-500 via-blue-600 to-green-600 bg-[length:400%_400%] animate-gradient h-screen bg-opacity-10">
     <div class="container p-3">
-        <img src="https://media.licdn.com/dms/image/v2/C560BAQFTBp7jlfHiug/company-logo_200_200/company-logo_200_200/0/1630601703372?e=2147483647&v=beta&t=0THPp6seshzPXP8rD4Z4tv2U4-ZupmpYAaorZYzbtNg" alt="Govt National College Logo" class="mx-auto w-1/12 h-1/12 rounded-full mb-3">
-        <h1 class="text-4xl text-red-500 text-center font-bold">Matrix Cryprographer</h1>
+        <img src="https://media.licdn.com/dms/image/v2/C560BAQFTBp7jlfHiug/company-logo_200_200/company-logo_200_200/0/1630601703372?e=2147483647&v=beta&t=0THPp6seshzPXP8rD4Z4tv2U4-ZupmpYAaorZYzbtNg" alt="Govt National College Logo" class="mx-auto w-1/5 h-1/5 sm:w-1/12 sm:h-1/12 rounded-full my-3">
+        <h1 class="text-4xl sm:text-6xl text-red-700 text-center font-extrabold my-1 font-iceland">Matrix Cryptographer</h1>
         <div class="w-1/2 sm:w-1/4 xl:w-1/5 mx-auto my-5 bg-slate-50 p-4 rounded">
             <form id="message-form" class="mx-auto space-y-2">
             <label for="message" class="text-base sm:textlg block">
                 Enter Message</label>
-             <input type="text" id="message" class="border-2 border-yellow-500 rounded-md w-full p-1" required>
+             <input type="text" id="message" class="border-2 border-yellow-500 hover:bg-yellow-600 transform hover:scale-105 transition-all duration-300 rounded-md w-full p-1" required>
             <label for="rowsB" class="text-base sm:textlg block">
                 Rows for Key Matrix</label>
-             <input type="number" id="rowsB" class="border-2 rounded-md border-yellow-500 w-full p-1" required>
+             <input type="number" id="rowsB" class="border-2 rounded-md border-yellow-500 hover:bg-yellow-600 transform hover:scale-105 transition-all duration-300 w-full p-1" required>
             <label for="colsB" class="text-base sm:textlg block">
                 Columns for Key Matrix</label>
-             <input type="number" id="colsB" class="border-2 rounded-md border-yellow-500 w-full p-1" required>
+             <input type="number" id="colsB" class="border-2 rounded-md border-yellow-500 hover:bg-yellow-600 transform hover:scale-105 transition-all duration-300 w-full p-1" required>
              <div id="key-matrix" class="my-3"></div>
-            <button type="submit" class="w-full p-2 rounded bg-yellow-500">Generate Matrices</button>
+            <button type="submit" class="w-full p-2 rounded bg-yellow-500 hover:bg-yellow-600 transform hover:scale-105 hover:font-bold transition-all duration-300">Generate Matrices</button>
         </form>
         </div>
-        <div id="matrix-output" class="w-11/12 mx-auto my-5 p-4 rounded"></div>
+        <div id="matrix-output" class="w-screen sm:w-11/12 text-xs sm:text-base mx-auto my-5 p-4 "></div>
     <script src="script.js"></script>
 </body>
 </html>
