@@ -29,7 +29,36 @@
             <button type="submit" class="w-full p-2 rounded bg-yellow-500 hover:bg-yellow-600 transform hover:scale-105 hover:font-bold transition-all duration-300">Generate Matrices</button>
         </form>
         </div>
-        <div id="matrix-output" class="w-screen sm:w-11/12 text-xs sm:text-base mx-auto my-5 p-4 "></div>
+        <div id="matrix-output" class="w-screen sm:w-11/12 text-xs sm:text-base mx-auto my-5 p-4 ">
+          <!-- <div class="w-1/12 mx-auto"><button id="show-data" class="hidden">Show Data</button></div> -->
+        </div>
+        <div class="p-4 mx-auto hidden" id="student-data">
+            <table class="text-center w-9/12 mx-auto bg-white">
+              <thead>
+                <tr style="border: 3px solid black;">
+                  <th class="py-1 font-bold text-lg" colspan="5">
+                    XYZ COLLEGE
+                  </th>
+                </tr>
+                <tr>
+                    <th class="px-1 py-1 border-2 border-black">Student Name</th>
+                    <th class="px-1 py-1 border-2 border-black">Student Class</th>
+                    <th class="px-1 py-1 border-2 border-black">Roll No.</th>
+                    <th class="px-1 py-1 border-2 border-black">Contact No.</th>
+                    <th class="px-1 py-1 border-2 border-black">Postal Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="px-1 py-1 border-2 border-black">Mariya DO Mansoor</td>
+                  <td class="px-1 py-1 border-2 border-black">XI Pre Medical</td>
+                  <td class="px-1 py-1 border-2 border-black">6362</td>
+                  <td class="px-1 py-1 border-2 border-black">0300-1234567</td>
+                  <td class="px-1 py-1 border-2 border-black">House No.2, A233, Block 2, Gulshan Iqbal, Karachi.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
     <script src="script.js"></script>
 </body>
 </html>

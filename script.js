@@ -103,7 +103,7 @@ document.getElementById("message-form").addEventListener("submit", function (eve
   function displayMatrix(title, matrix) {
     const matrixDiv = document.createElement("div");
     matrixDiv.className =
-      "bg-slate-50 p-4 m-2 rounded-md shadow-md inline-block align-top border-2 border-black hover:bg-cyan-300 transform hover:scale-105 transition-all duration-300";
+      "bg-slate-50 p-4 m-2 rounded-md shadow-md inline-block align-top border-2 border-black hover:bg-teal-500 transform hover:scale-105 transition-all duration-300";
   
     // Title for the matrix
     const titleElement = document.createElement("h3");
@@ -147,9 +147,18 @@ document.getElementById("message-form").addEventListener("submit", function (eve
 
   // final message
   const originalMessageDiv = document.createElement("div");
-  originalMessageDiv.className = "bg-slate-50 p-4 m-2 rounded-md shadow-md mt-4 text-lg border-2 border-black hover:bg-cyan-300 transform hover:scale-105 transition-all duration-300";
+  const dataTable = document.getElementById("student-data");
+  // const dataBtn = document.getElementById("show-data");7
+  const dataBtn = document.createElement("button");
+  dataBtn.innerText = "Show Data";
+  dataBtn.className = "w-11/12 sm:w-full text-base p-2 rounded bg-yellow-500 hover:bg-yellow-600 transform hover:scale-105 hover:font-bold transition-all duration-300";
+  originalMessageDiv.className = "bg-slate-50 p-4 m-2 rounded-md shadow-md mt-4 text-lg border-2 border-black hover:bg-teal-500 transform hover:scale-105 transition-all duration-300";
   originalMessageDiv.innerHTML = `<strong>Decrypted Message:</strong> ${message}`;
   outputDiv.appendChild(originalMessageDiv);
+  outputDiv.appendChild(dataBtn);
+  dataBtn.addEventListener("click", () => {
+    dataTable.className = "p-4 mx-auto"
+  });
 });
 
 // Event listeners to dynamically update key matrix input fields
@@ -184,3 +193,5 @@ function updateKeyMatrixInputs() {
     keyMatrixDiv.appendChild(rowDiv);
   }
 }
+
+
